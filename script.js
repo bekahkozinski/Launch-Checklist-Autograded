@@ -1,16 +1,15 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
-    let form = document.querySelector("#launchForm form");
-    let pilotNameInput = document.querySelector("#pilotName");
-    let copilotNameInput = document.querySelector("#copilotName");
-    let fuelLevelInput = document.querySelector("#fuelLevel");
-    let cargoMassInput = document.querySelector("#cargoMass");
+    let form = document.querySelector("form");
+    let pilotNameInput = document.querySelector("input[name='pilotName']");
+    let copilotNameInput = document.querySelector("input[name='copilotName']");
+    let fuelLevelInput = document.querySelector("input[name='fuelLevel']");
+    let cargoMassInput = document.querySelector("input[name='cargoMass']");
     let faultyItems = document.getElementById("faultyItems");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        console.log("Hello");
         formSubmission(document, faultyItems, pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
     });
 
